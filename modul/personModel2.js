@@ -25,10 +25,10 @@ const person2Schema=new mongoose.Schema({
     type:Number,
     required:[true,"Siz age kirtishingiz kerak !"]
   },
-  address:[{
+  address:{
     type:mongoose.Schema.ObjectId,
     ref:'address2'
-  }]
+  }
 })
 
 const Person2=mongoose.model('person2',person2Schema)

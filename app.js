@@ -2,6 +2,7 @@ const express=require('express')
 const appError = require('./utility/appError')
 const personRout=require('./Router/personRout')
 const personRout1=require('./Router/personRout1')
+const personRout2=require('./Router/personRout2')
 
 
 const app=express()
@@ -11,6 +12,7 @@ app.use(express.json())
 
 app.use('/person',personRout)
 app.use('/person1',personRout1)
+app.use('/person2',personRout2)
 
 
 app.all('*',function(req,res,next){
